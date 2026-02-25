@@ -111,3 +111,27 @@ main {
   letter-spacing: 0.05em;
   color: #ccc;
 }
+
+#lightbox-prev,
+#lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #eee;
+  font-size: 4rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.6;
+  padding: 0 0.5rem;
+  user-select: none;
+}
+
+#lightbox-prev { left: 1rem; }
+#lightbox-next { right: 1rem; }
+
+#lightbox-prev:hover,
+#lightbox-next:hover {
+  opacity: 1;
+}
