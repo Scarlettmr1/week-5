@@ -1,47 +1,35 @@
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-const lightboxCaption = document.getElementById('lightbox-caption');
-const closeBtn = document.getElementById('lightbox-close');
-const prevBtn = document.getElementById('lightbox-prev');
-const nextBtn = document.getElementById('lightbox-next');
-
-const items = Array.from(document.querySelectorAll('.gallery-item'));
-let currentIndex = 0;
-
-function openLightbox(index) {
-  currentIndex = index;
-  const img = items[currentIndex].querySelector('img');
-  const caption = items[currentIndex].querySelector('figcaption');
-  lightboxImg.src = img.src;
-  lightboxImg.alt = img.alt;
-  lightboxCaption.textContent = caption.textContent;
-  lightbox.style.display = 'flex';
-}
-
-function closeLightbox() {
-  lightbox.style.display = 'none';
-  lightboxImg.src = '';
-}
-
-function navigate(direction) {
-  currentIndex = (currentIndex + direction + items.length) % items.length;
-  openLightbox(currentIndex);
-}
-
-items.forEach((item, index) => {
-  item.addEventListener('click', () => openLightbox(index));
+// Book Lane Buttons
+const bookButtons = document.querySelectorAll('.book-btn');
+bookButtons.forEach(button => {
+  button.addEventListener('click', (e) => {
+    if (!e.target.disabled) {
+      const laneCard = e.target.closest('.lane-card');
+      const laneName = laneCard.querySelector('h3').textContent;
+      alert(`Booking request for ${laneName}. Please call (555) 123-BOWL to complete your reservation!`);
+    }
+  });
 });
 
-closeBtn.addEventListener('click', closeLightbox);
-prevBtn.addEventListener('click', () => navigate(-1));
-nextBtn.addEventListener('click', () => navigate(1));
+// Contact Form
+const form = document.querySelector('form');
+if (form) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = form.querySelector('input[type="text"]').value;
+    alert(`Thank you, ${name}! Your message has been sent. We'll be in touch soon!`);
+    form.reset();
+  });
+}
 
-lightbox.addEventListener('click', (e) => {
-  if (e.target === lightbox) closeLightbox();
-});
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeLightbox();
-  if (e.key === 'ArrowLeft') navigate(-1);
-  if (e.key === 'ArrowRight') navigate(1);
+// Smooth Scrolling for Navigation Links
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    const href = link.getAttribute('href');
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const section = document.querySelector(href);
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
 });

@@ -4,69 +4,170 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <title>Bowling Lanes - Premium Bowling Experience</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <header>
-    <h1>My Portfolio</h1>
+    <h1>🎳 Strike Bowling Lanes</h1>
+    <p class="tagline">Premium Bowling Experience for Everyone</p>
   </header>
 
+  <nav class="nav-menu">
+    <a href="#lanes" class="nav-link">Lanes</a>
+    <a href="#scores" class="nav-link">High Scores</a>
+    <a href="#hours" class="nav-link">Hours</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </nav>
+
   <main>
-    <section class="gallery">
+    <section id="lanes" class="lanes-section">
+      <h2>Our Bowling Lanes</h2>
+      <div class="lanes-grid">
+        <div class="lane-card">
+          <h3>Lane 1-5</h3>
+          <p class="lane-status available">Available</p>
+          <p>Classic Bowling Experience</p>
+          <button class="book-btn">Book Now</button>
+        </div>
 
-      <figure class="gallery-item">
-        <img src="https://picsum.photos/seed/photo1/600/400" alt="Gallery photo 1">
-        <figcaption>Ocean Shorelines</figcaption>
-      </figure>
+        <div class="lane-card">
+          <h3>Lane 6-10</h3>
+          <p class="lane-status available">Available</p>
+          <p>Premium with Bumpers</p>
+          <button class="book-btn">Book Now</button>
+        </div>
 
-      <figure class="gallery-item">
-        <img src="https://picsum.photos/seed/photo2/600/400" alt="Gallery photo 2">
-        <figcaption>Grand Canyon</figcaption>
-      </figure>
+        <div class="lane-card">
+          <h3>Lane 11-15</h3>
+          <p class="lane-status unavailable">In Use</p>
+          <p>Tournament Grade Lanes</p>
+          <button class="book-btn" disabled>Coming Soon</button>
+        </div>
 
-      <figure class="gallery-item">
-        <img src="https://picsum.photos/seed/photo3/600/400" alt="Gallery photo 3">
-        <figcaption>Fork Models</figcaption>
-      </figure>
+        <div class="lane-card">
+          <h3>Lane 16-20</h3>
+          <p class="lane-status available">Available</p>
+          <p>Family-Friendly with Bumpers</p>
+          <button class="book-btn">Book Now</button>
+        </div>
 
-      <figure class="gallery-item">
-        <img src="https://picsum.photos/seed/photo4/600/400" alt="Gallery photo 4">
-        <figcaption>Desk at Work</figcaption>
-      </figure>
+        <div class="lane-card">
+          <h3>VIP Party Room</h3>
+          <p class="lane-status available">Available</p>
+          <p>Exclusive Event Space</p>
+          <button class="book-btn">Book Now</button>
+        </div>
 
-      <figure class="gallery-item">
-        <img src="https://picsum.photos/seed/photo5/600/400" alt="Gallery photo 5">
-        <figcaption>Sunset at a beach</figcaption>
-      </figure>
+        <div class="lane-card">
+          <h3>Glow Bowling</h3>
+          <p class="lane-status available">Available</p>
+          <p>LED Lights & Music (Fri-Sat)</p>
+          <button class="book-btn">Book Now</button>
+        </div>
+      </div>
+    </section>
 
-      <figure class="gallery-item">
-        <img src="https://picsum.photos/seed/photo6/600/400" alt="Gallery photo 6">
-        <figcaption>Green Moutain Plains</figcaption>
-      </figure>
+    <section id="scores" class="scores-section">
+      <h2>🏆 Leaderboard</h2>
+      <div class="leaderboard">
+        <table>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Player Name</th>
+              <th>Score</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Alex Turner</td>
+              <td>299</td>
+              <td>Mar 3, 2026</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Jordan Smith</td>
+              <td>285</td>
+              <td>Mar 2, 2026</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Casey Williams</td>
+              <td>278</td>
+              <td>Mar 1, 2026</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Morgan Lee</td>
+              <td>267</td>
+              <td>Feb 28, 2026</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Riley Chen</td>
+              <td>259</td>
+              <td>Feb 27, 2026</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-      <figure class="gallery-item">
-        <img src="https://picsum.photos/seed/photo7/600/400" alt="Gallery photo 7">
-        <figcaption>Forest Trail</figcaption>
-      </figure>
+    <section id="hours" class="info-section">
+      <h2>Hours & Pricing</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Operating Hours</h3>
+          <p><strong>Monday - Thursday:</strong> 10 AM - 11 PM</p>
+          <p><strong>Friday - Saturday:</strong> 10 AM - 2 AM</p>
+          <p><strong>Sunday:</strong> 11 AM - 11 PM</p>
+        </div>
 
-      <figure class="gallery-item">
-        <img src="https://picsum.photos/seed/photo8/600/400" alt="Gallery photo 8">
-        <figcaption>Cranes on the boat dock</figcaption>
-      </figure>
+        <div class="info-card">
+          <h3>Pricing</h3>
+          <p><strong>Per Game:</strong> $6 per person</p>
+          <p><strong>Shoe Rental:</strong> $3</p>
+          <p><strong>Group Discount:</strong> 10+ people get 20% off</p>
+        </div>
 
+        <div class="info-card">
+          <h3>Amenities</h3>
+          <p>✓ Full Food & Bar Service</p>
+          <p>✓ Arcade Games</p>
+          <p>✓ Party Rooms Available</p>
+          <p>✓ Free WiFi</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <h2>Get In Touch</h2>
+      <div class="contact-form">
+        <form>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <input type="tel" placeholder="Phone Number">
+          <textarea placeholder="Message or Booking Request" rows="5"></textarea>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+        <div class="contact-info">
+          <p><strong>Phone:</strong> (555) 123-BOWL</p>
+          <p><strong>Email:</strong> info@strikebowling.com</p>
+          <p><strong>Address:</strong> 123 Strike Lane, Fun City, FC 12345</p>
+          <p><strong>Hours:</strong> Mon-Thu 10AM-11PM, Fri-Sat 10AM-2AM, Sun 11AM-11PM</p>
+        </div>
+      </div>
     </section>
   </main>
 
-  <div id="lightbox">
-    <button id="lightbox-close" aria-label="Close">&times;</button>
-    <button id="lightbox-prev" aria-label="Previous">&#8249;</button>
-    <img id="lightbox-img" src="" alt="">
-    <button id="lightbox-next" aria-label="Next">&#8250;</button>
-    <p id="lightbox-caption"></p>
-  </div>
+  <footer>
+    <p>&copy; 2026 Strike Bowling Lanes. All rights reserved. | 🎳 Bowl Better. Bowl Happier. 🎳</p>
+  </footer>
 
   <script src="gallery.js"></script>
 </body>
